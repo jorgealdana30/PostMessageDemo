@@ -5,7 +5,7 @@ export const App = () => {
     const clickMe = () => {
         window.postMessage(
             "Hola esto es un post Message",
-            "http://192.168.1.24:5173"
+            "https://postmessages.netlify.app/"
         );
     };
 
