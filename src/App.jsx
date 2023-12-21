@@ -3,7 +3,7 @@ import {useState} from "react";
 export const App = () => {
 
     const clickMe = () => {
-        window.postMessage(
+        window.parent.postMessage(
             "Hola esto es un post Message",
             "https://postmessages.netlify.app/"
         );
