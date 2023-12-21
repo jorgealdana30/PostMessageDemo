@@ -1,0 +1,4 @@
+[{
+  "relation": ["delegate_permission/common.use_as_origin"],
+  "target" : { "namespace": "android_app", "package_name": "com.jorgealdana.postmessage", "sha256_cert_fingerprints": [""] }
+}]
