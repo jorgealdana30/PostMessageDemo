@@ -5,7 +5,7 @@ export const App = () => {
     const clickMe = () => {
         window.parent.postMessage(
             "Hola esto es un post Message",
-            "https://postmessages.netlify.app"
+            "https://postmessages.netlify.app/"
         );
     };
 
