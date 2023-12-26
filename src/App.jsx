@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {render} from "react-dom";
 
 export const App = () => {
 
@@ -13,6 +14,25 @@ export const App = () => {
     const handleChange = (e) => {
         setUserInput(e.target.value);
     };
+
+
+    window.addEventListener("message", function (event) {
+        // We are receiveing messages from any origin, you can check of the origin by
+        // using event.origin
+
+        // get the port then use it for communication.
+        var port = event.ports[0];
+        if (typeof port === 'undefined') return;
+
+        // Post message on this port.
+        port.postMessage("Test")
+
+        // Receive upcoming messages on this port.
+        port.onmessage = function (event) {
+            console.log("[PostMessage1] Got message" + event.data);
+        };
+    });
+
 
     return (
         <div
